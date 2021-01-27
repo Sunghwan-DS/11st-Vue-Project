@@ -5,6 +5,7 @@
     <my-header></my-header>
     <billboard></billboard>
     <direct></direct>
+    <hot-focus></hot-focus>
   </div>
 </template>
 
@@ -14,13 +15,15 @@ import RNB from '~/src/components/RNB'
 import MyHeader from '~/src/components/MyHeader'
 import Billboard from '~/src/components/Billboard'
 import Direct from '~/src/components/Direct'
+import HotFocus from '~/src/components/HotFocus'
 export default {
   components: {
     LNB,
     RNB,
     MyHeader,
     Billboard,
-    Direct
+    Direct,
+    HotFocus,
   }
 }
 </script>
