@@ -41,6 +41,34 @@
         </div>
       </div>
     </header>
+    <div
+      :class="{ fixed: isFixed }"
+      class="utils">
+      <div class="inner">
+        <ul>
+          <li>
+            <a href="javascript:void(0)">베스트</a>
+          </li>
+          <li>
+            <a href="javascript:void(0)">쿠폰/혜택</a>
+          </li>
+          <li>
+            <a href="javascript:void(0)">기획전</a>
+          </li>
+          <li>
+            <a href="javascript:void(0)">오늘장보기</a>
+          </li>
+          <li>
+            <a href="javascript:void(0)">T공식대리점</a>
+          </li>
+          <li>
+            <a
+              class="shocking-deal"
+              href="javascript:void(0)"></a>
+          </li>
+        </ul>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -184,6 +212,41 @@ header {
             &:hover span.name {
               color: #f43142;
             }
+          }
+        }
+      }
+    }
+  }
+}
+.utils {
+  border-top: 1px solid #f1f1f1;
+  &.fixed {
+    padding-top: 120px;
+  }
+  .inner {
+    width: 1240px;
+    margin: 0 auto;
+    ul {
+      display: flex;
+      li {
+        box-sizing: border-box;
+        height: 66px;
+        margin-right: 25px;
+        &:last-child {
+          margin-right: 0px;
+        }
+        &:hover {
+          border-bottom: 2px solid red;
+        }
+        a {
+          display: flex;
+          height: 66px;
+          align-items: center;
+          &.shocking-deal {
+            width: 63px;
+            background-image: url("https://trusting-williams-8cacfb.netlify.app/images/globals_2x.png");
+            background-position: -94px 0;
+            background-size: 363px;
           }
         }
       }
