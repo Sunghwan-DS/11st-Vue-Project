@@ -8,7 +8,7 @@
         <div class="flex-space"></div>
         <div
           class="close-nav"
-          @click="offNav"></div>
+          @click="offNav('LNB')"></div>
       </div>
       <div
         ref="container"
@@ -142,7 +142,7 @@
     <div
       v-if="isShowLNB"
       class="nav-bg"
-      @click="offNav"></div>
+      @click="offNav('LNB')"></div>
   </div>
 </template>
 
@@ -177,8 +177,8 @@ export default {
       console.log(this.navigations)
       this.done = true
     },
-    offNav () {
-      this.$store.dispatch('navigation/offNav')
+    offNav (name) {
+      this.$store.dispatch('navigation/offNav', name)
     },
     toggleGroup (name) {
       // outlets
