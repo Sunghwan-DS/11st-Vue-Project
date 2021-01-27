@@ -39,9 +39,8 @@
             </div>
           </div>
           <div
-            id="open-more"
             class="open-more"
-            @click="toggleRankingWrap"></div>
+            @click="toggleRankingWrap($event)"></div>
           <div
             v-if="isShowRankingWrap"
             class="ranking-wrap">
@@ -52,7 +51,7 @@
               </div>
               <div
                 class="close-wrap"
-                @click="toggleRankingWrap"></div>
+                @click="toggleRankingWrap($event)"></div>
             </div>
             <div class="tabs">
               <div
@@ -205,11 +204,9 @@ export default {
       console.log(res)
       // location = res
     },
-    toggleRankingWrap () {
+    toggleRankingWrap (event) {
       this.isShowRankingWrap = !this.isShowRankingWrap
-      var element;
-      element = document.getElementById("open-more");
-      element.classList.toggle("active")
+      event.currentTarget.classList.toggle("active")
     },
   }
 }
