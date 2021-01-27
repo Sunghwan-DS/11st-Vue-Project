@@ -60,7 +60,7 @@
           class="group outlets">
           <div
             class="group__title"
-            @click="toggleGroup('outlets')">
+            @click="toggleGroup('outlets', $event)">
             {{ navigations.outlets.title }}
             <div class="toggle-list"></div>
           </div>
@@ -84,7 +84,7 @@
           class="group partners">
           <div
             class="group__title"
-            @click="toggleGroup('partners')">
+            @click="toggleGroup('partners', $event)">
             {{ navigations.partners.title }}
             <div class="toggle-list"></div>
           </div>
@@ -108,7 +108,7 @@
           class="group brandMall">
           <div
             class="group__title"
-            @click="toggleGroup('brandMall')">
+            @click="toggleGroup('brandMall', $event)">
             {{ navigations.brandMall.title }}
             <div class="toggle-list"></div>
           </div>
@@ -180,7 +180,7 @@ export default {
     offNav (name) {
       this.$store.dispatch('navigation/offNav', name)
     },
-    toggleGroup (name) {
+    toggleGroup (name, event) {
       // outlets
       const pascalCaseName = _upperFirst(name)
       // => Outlets
@@ -193,6 +193,7 @@ export default {
           this.$refs.container.scrollTop = this.$refs[name].offsetTop - 100
         })
       }
+      event.currentTarget.classList.toggle("active")
     }
   }
 }
@@ -273,6 +274,12 @@ nav {
             box-sizing: border-box;
             transform: rotate(45deg);
           }
+        }
+      }
+      .active {
+        .toggle-list::after {
+          transform: rotate(225deg);
+          margin-top: 3px;
         }
       }
       &__list {
