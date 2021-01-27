@@ -41,9 +41,7 @@
         </div>
       </div>
     </header>
-    <div
-      :class="{ fixed: isFixed }"
-      class="utils">
+    <div class="utils">
       <div class="inner">
         <ul>
           <li>
