@@ -39,6 +39,7 @@
             </div>
           </div>
           <div
+            id="open-more"
             class="open-more"
             @click="toggleRankingWrap"></div>
           <div
@@ -206,6 +207,9 @@ export default {
     },
     toggleRankingWrap () {
       this.isShowRankingWrap = !this.isShowRankingWrap
+      var element;
+      element = document.getElementById("open-more");
+      element.classList.toggle("active")
     },
   }
 }
@@ -333,6 +337,10 @@ header {
           border-width: 0 1px 1px 0;
           box-sizing: border-box;
           transform: rotate(45deg);
+        }
+        &.active::after {
+          transform: rotate(225deg);
+          margin-top: 3px;
         }
       }
       .ranking-wrap {
