@@ -41,6 +41,7 @@
           <div
             class="open-more"
             @click="toggleRankingWrap($event)"></div>
+          <!--인수 없는 단일 호출에서는 이벤트 객체를 따로 넣지 않아도 돼요~-->
           <div
             v-if="isShowRankingWrap"
             class="ranking-wrap">

@@ -65,8 +65,11 @@ export default {
     li {
       a {
         div {
+          // 블록 요소는 이미 수직으로 쌓여요~
           display: flex;
           flex-direction: column;
+          // 글자의 교차축 가운데 정렬을 의도하신 하지만,
+          // text-align: center; 사용을 더 권장해요~
           align-items: center;
         }
       }
