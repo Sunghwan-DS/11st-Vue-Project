@@ -17,6 +17,7 @@ import MyHeader from '~/src/components/MyHeader'
 import Billboard from '~/src/components/Billboard'
 import Direct from '~/src/components/Direct'
 import HotFocus from '~/src/components/HotFocus'
+// 위 방식처럼 경로 별칭을 사용하는 게 좋아요~
 import GlobalBanner from "./components/GlobalBanner";
 export default {
   components: {
